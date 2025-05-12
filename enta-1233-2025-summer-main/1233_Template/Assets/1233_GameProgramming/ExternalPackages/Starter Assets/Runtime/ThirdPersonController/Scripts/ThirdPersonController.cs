@@ -163,7 +163,7 @@ namespace StarterAssets
 
         private void LateUpdate()
         {
-            CameraRotation();
+            //CameraRotation();
         }
 
         private void AssignAnimationIDs()
@@ -190,7 +190,7 @@ namespace StarterAssets
             }
         }
 
-        private void CameraRotation()
+        /*private void CameraRotation()
         {
             // if there is an input and camera position is not fixed
             if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
@@ -210,6 +210,7 @@ namespace StarterAssets
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
+        */
 
         private void Move()
         {
