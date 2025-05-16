@@ -12,5 +12,11 @@ public class GameManager : MonoBehaviour
     {
         characterManager = PlayerCharacter.GetComponent<CharacterManager>();
     }
-
+    /*TO DO
+     * -Scoreboard
+     * -Saving High Scores
+     * -Player Death
+     * -GameOver and Restart
+     * -Global Difficulty (Raises based on how long player has survived)
+     */
 }

@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class CameraMotionTest : MonoBehaviour
 {
+    
     [SerializeField] float moveSensitivity;
     [SerializeField] float rotationSensitivity;
-    float yRotate;
-    float yPosition;
+    private float yRotate;
+    private float yPosition;
+
+    //Script to manage camera movement 
     private void FixedUpdate()
     {
         MouseEdgeDetect();
-        
     }
 
     //Checks the mouse position relative to the center of the screen and triggers CameraScroll function if the mouse goes near the edge of the screen
@@ -37,8 +39,7 @@ public class CameraMotionTest : MonoBehaviour
 
     //Moves and rotates the camera towards the given coordinates
     void CameraScroll()
-    {
-
+    { 
         yRotate = Mathf.Clamp(yRotate, 0, 20);
         yPosition = Mathf.Clamp(yPosition, 0.4f, 0.7f);
 

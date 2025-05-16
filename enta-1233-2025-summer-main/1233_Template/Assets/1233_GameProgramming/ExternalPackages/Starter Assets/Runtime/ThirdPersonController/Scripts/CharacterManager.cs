@@ -10,5 +10,14 @@ public class CharacterManager : MonoBehaviour
     {
         gameManager = FindFirstObjectByType<GameManager>();
     }
-  
+    /*TO DO
+     * -Player Health
+     * -Damage Management
+     * -Ammo Count (Could be split off into a separate gun controller script)
+     * -Store player status effects (Speed up, regen, damage bonuses)
+     * -Character Animation stuff?
+     * -Character State (Cover/Running)
+     */
+    
+
 }
