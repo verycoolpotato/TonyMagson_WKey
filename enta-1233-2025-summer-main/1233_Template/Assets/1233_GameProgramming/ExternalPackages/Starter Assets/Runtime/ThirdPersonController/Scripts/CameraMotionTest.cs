@@ -10,8 +10,7 @@ public class CameraMotionTest : MonoBehaviour
     [SerializeField] float rotationSensitivity;
     private float yRotate;
     private float yPosition;
-
-    //Script to manage camera movement 
+    
     private void FixedUpdate()
     {
         MouseEdgeDetect();
@@ -25,13 +24,13 @@ public class CameraMotionTest : MonoBehaviour
         if ((Input.mousePosition - screenCenter).y < -120f)
         {
             yRotate += 1 * Time.deltaTime * rotationSensitivity;
-            yPosition -= 1 * Time.deltaTime * moveSensitivity;
+           // yPosition -= 1 * Time.deltaTime * moveSensitivity;
             CameraScroll();
         }
         else if ((Input.mousePosition - screenCenter).y > 120f)
         {
             yRotate -= 1 * Time.deltaTime * rotationSensitivity;
-            yPosition += 1 * Time.deltaTime * moveSensitivity;
+            //yPosition += 1 * Time.deltaTime * moveSensitivity;
             CameraScroll();
         }
         
@@ -41,9 +40,9 @@ public class CameraMotionTest : MonoBehaviour
     void CameraScroll()
     { 
         yRotate = Mathf.Clamp(yRotate, 0, 20);
-        yPosition = Mathf.Clamp(yPosition, 0.4f, 0.7f);
+        yPosition = Mathf.Clamp(yPosition, -0.5f, 0.5f);
 
-        transform.localEulerAngles = (new Vector3(yRotate, 0, 0));
-        transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+        transform.localEulerAngles = (new Vector3(yRotate, -24,0 ));
+        //transform.localPosition = new Vector3(transform.position.x, yPosition, transform.position.z);
     }
 }

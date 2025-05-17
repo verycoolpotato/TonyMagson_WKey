@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameManager gameManager;
+    private void Awake()
     {
-        
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Controls enemy spawning and synchronised behaviour. Talks to gameManager for diificulty 
 }
